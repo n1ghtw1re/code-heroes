@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { ArrowLeft } from 'lucide-react';
 import { pioneers } from '@/data/pioneers';
+import { motion } from 'framer-motion';
 
 const PioneerDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -75,13 +76,35 @@ const PioneerDetail = () => {
                 </div>
               </div>
               
-              {/* Biography */}
-              <Card className="mb-8">
-                <CardContent className="pt-6">
-                  <h2 className="text-xl font-bold mb-4">Biography</h2>
-                  <p className="text-lg">{pioneer.longBio}</p>
-                </CardContent>
-              </Card>
+              {/* Image and Biography */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <motion.div 
+                  className="md:col-span-1 relative"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <div className="rounded-lg overflow-hidden bg-hacker-green/10 border border-hacker-green/30 aspect-square flex items-center justify-center">
+                    <img
+                      src={getPioneerImage(pioneer.id)}
+                      alt={pioneer.name}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg"; 
+                      }}
+                    />
+                  </div>
+                </motion.div>
+                <div className="md:col-span-2">
+                  <Card>
+                    <CardContent className="pt-6">
+                      <h2 className="text-xl font-bold mb-4">Biography</h2>
+                      <p className="text-lg">{pioneer.longBio}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
               
               {/* Quote */}
               <Card className="mb-8 bg-hacker-green/10 border-hacker-green">
@@ -149,6 +172,34 @@ const PioneerDetail = () => {
     </PageTransition>
   );
 };
+
+// Helper function to get pioneer image from Wikipedia or use a fallback
+function getPioneerImage(pioneerId: string): string {
+  const imageMap: Record<string, string> = {
+    'grace-hopper': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg/800px-Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg',
+    'alan-turing': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/800px-Alan_Turing_Aged_16.jpg',
+    'radia-perlman': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/RadiaPerlman_crop.jpg/800px-RadiaPerlman_crop.jpg',
+    'tim-berners-lee': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg/800px-Sir_Tim_Berners-Lee_%28cropped%29.jpg',
+    'katherine-johnson': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Katherine_Johnson_1983.jpg/800px-Katherine_Johnson_1983.jpg',
+    'vint-cerf': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Vint_cerf_google.jpg/800px-Vint_cerf_google.jpg',
+    'barbara-liskov': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Barbara_Liskov_MIT_computer_scientist_2010.jpg/800px-Barbara_Liskov_MIT_computer_scientist_2010.jpg',
+    'mary-jackson': 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Mary_Jackson_%28engineer%29.jpg/800px-Mary_Jackson_%28engineer%29.jpg',
+    'dennis-ritchie': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Dennis_Ritchie_2011.jpg/800px-Dennis_Ritchie_2011.jpg',
+    'linus-torvalds': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/800px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg',
+    'ada-lovelace': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg',
+    'john-von-neumann': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/JohnvonNeumann-LosAlamos.gif/800px-JohnvonNeumann-LosAlamos.gif',
+    'margaret-hamilton': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Margaret_Hamilton_-_restoration.jpg/800px-Margaret_Hamilton_-_restoration.jpg',
+    'donald-knuth': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/KnuthAtOpenContentAlliance.jpg/800px-KnuthAtOpenContentAlliance.jpg',
+    'sophie-wilson': 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Sophie_Wilson_at_the_Acorn_World_show.jpg',
+    'frances-allen': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Frances_Allen_2005.jpg/800px-Frances_Allen_2005.jpg',
+    'shirley-ann-jackson': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Shirley_Ann_Jackson_official_portrait.jpg/800px-Shirley_Ann_Jackson_official_portrait.jpg',
+    'guido-van-rossum': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Guido-portrait-2014-drc.jpg/800px-Guido-portrait-2014-drc.jpg',
+    'edsger-dijkstra': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/800px-Edsger_Wybe_Dijkstra.jpg',
+    'jean-bartik': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Jean_Bartik.jpg/800px-Jean_Bartik.jpg'
+  };
+  
+  return imageMap[pioneerId] || '/placeholder.svg';
+}
 
 // Helper functions to get next and previous pioneers
 function getPreviousPioneer(currentId: string) {
