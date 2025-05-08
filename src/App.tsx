@@ -11,6 +11,7 @@ import PioneerDetail from "./pages/PioneerDetail";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Resources from "./pages/Resources";
+import SpotlightOnOpenSource from "./pages/SpotlightOnOpenSource";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const AnimatedRoutes = () => {
         <Route path="/pioneer/:id" element={<PioneerDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/open-source" element={<SpotlightOnOpenSource />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
