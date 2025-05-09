@@ -1,4 +1,3 @@
-
 export interface Pioneer {
   id: string;
   name: string;
@@ -571,5 +570,57 @@ export const pioneers: Pioneer[] = [
       }
     ],
     tags: ["ENIAC", "Early Computing", "Programming Pioneers", "Women in Computing"]
-  }
-];
+  },
+  
+  {
+    id: "ken-thompson",
+    name: "Ken Thompson",
+    birthYear: "1943",
+    deathYear: null,
+    shortBio: "Co-creator of Unix and the B programming language, laying the foundation for modern operating systems.",
+    longBio: "Kenneth Lane Thompson is an American pioneer of computer science. He has worked at Bell Labs and Google. While at Bell Labs, he co-designed the original Unix operating system, the B programming language (the predecessor to C), and was one of the creators and early developers of the Plan 9 operating systems. Thompson also invented the Go programming language along with Rob Pike and Robert Griesemer.",
+    contributions: [
+      "Co-created the Unix operating system",
+      "Developed the B programming language, predecessor to C",
+      "Created the ed text editor",
+      "Contributed to the UTF-8 encoding",
+      "Helped develop the Go programming language"
+    ],
+    quote: "When in doubt, use brute force.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/Ken_Thompson"
+      },
+      {
+        label: "Turing Award",
+        url: "https://amturing.acm.org/award_winners/thompson_4588371.cfm"
+      }
+    ],
+    tags: ["Unix", "Operating Systems", "Programming Languages", "B Language", "Go"]
+  },
+  {
+    id: "richard-stallman",
+    name: "Richard Stallman",
+    birthYear: "1953",
+    deathYear: null,
+    shortBio: "Founder of the Free Software Foundation and creator of GNU, championing software freedom.",
+    longBio: "Richard Matthew Stallman, often known as RMS, is an American free software movement activist and programmer. He campaigns for software to be distributed in a manner such that its users receive the freedoms to use, study, distribute, and modify that software. Stallman launched the GNU Project in 1983 to create a free Unix-like operating system, and has been the project's lead architect and organizer.",
+    contributions: [
+      "Founded the Free Software Foundation (FSF)",
+      "Launched the GNU Project to create a free Unix-like operating system",
+      "Developed the GNU Compiler Collection (GCC)",
+      "Created the GNU Emacs text editor",
+      "Authored the GNU General Public License (GPL)"
+    ],
+    quote: "Free software is a matter of liberty, not price. To understand the concept, you should think of 'free' as in 'free speech', not as in 'free beer'.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/Richard_Stallman"
+      },
+      {
+        label: "GNU Project",
+        url: "https://www.gnu.org/gnu/rms-lisp.
