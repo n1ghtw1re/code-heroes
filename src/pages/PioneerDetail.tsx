@@ -1,3 +1,4 @@
+
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
@@ -8,7 +9,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { ArrowLeft } from 'lucide-react';
-import { pioneers } from '@/data/pioneers';
+import { pioneers } from '@/data/pioneers'; // Updated import
 import { motion } from 'framer-motion';
 
 const PioneerDetail = () => {
