@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Github, Link as LinkIcon, Twitter, Mastodon } from 'lucide-react';
+import { Github, Link as LinkIcon, Twitter } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -58,7 +58,8 @@ export const Footer = () => {
                   aria-label="Mastodon"
                   className="text-muted-foreground hover:text-hacker-green transition-colors"
                 >
-                  <Mastodon size={18} />
+                  {/* Using Twitter icon as a substitute since Mastodon isn't available */}
+                  <Twitter size={18} />
                 </a>
               </div>
             </div>
