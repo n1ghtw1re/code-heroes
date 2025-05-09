@@ -1,4 +1,3 @@
-
 export interface Pioneer {
   id: string;
   name: string;
@@ -628,5 +627,201 @@ export const pioneers: Pioneer[] = [
       }
     ],
     tags: ["Free Software", "GNU", "GPL", "Software Freedom", "FSF"]
+  },
+  {
+    id: "brian-kernighan",
+    name: "Brian Kernighan",
+    birthYear: "1942",
+    deathYear: null,
+    shortBio: "Co-author of 'The C Programming Language' and contributor to Unix development.",
+    longBio: "Brian Wilson Kernighan is a Canadian computer scientist, professor, and author. He worked at Bell Labs and contributed to the development of Unix. He is the co-creator of the AWK and AMPL programming languages. He co-authored the first book on the C programming language with Dennis Ritchie, which became the definitive reference for the language. He is currently a professor at Princeton University.",
+    contributions: [
+      "Co-wrote 'The C Programming Language' book with Dennis Ritchie",
+      "Contributed to the development of Unix",
+      "Co-created the AWK programming language",
+      "Developed the AMPL programming language",
+      "Authored numerous influential books on programming"
+    ],
+    quote: "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/Brian_Kernighan"
+      },
+      {
+        label: "Princeton Profile",
+        url: "https://www.cs.princeton.edu/~bwk/"
+      }
+    ],
+    tags: ["C Programming", "Unix", "Programming Languages", "AWK", "Computer Science Education"]
+  },
+  {
+    id: "larry-wall",
+    name: "Larry Wall",
+    birthYear: "1954",
+    deathYear: null,
+    shortBio: "Creator of Perl programming language and influential in open-source development.",
+    longBio: "Larry Wall is an American computer programmer and author. He created the Perl programming language in 1987, a widely used general-purpose programming language known for its text processing capabilities. Wall is known for his pragmatic approach to programming and his wit. He has received the Free Software Foundation Award for the Advancement of Free Software and the Dr. Dobb's Excellence in Programming Award.",
+    contributions: [
+      "Created the Perl programming language",
+      "Developed the patch program for Unix",
+      "Authored the rn Usenet client",
+      "Pioneered many programming techniques used in open-source software",
+      "Promoted the idea that programming languages should be adaptable and practical"
+    ],
+    quote: "There's more than one way to do it.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/Larry_Wall"
+      },
+      {
+        label: "Perl Foundation",
+        url: "https://www.perl.org/community/larry-wall.html"
+      }
+    ],
+    tags: ["Perl", "Programming Languages", "Open Source", "Text Processing", "Unix"]
+  },
+  {
+    id: "john-backus",
+    name: "John Backus",
+    birthYear: "1924",
+    deathYear: "2007",
+    shortBio: "Led the development of FORTRAN, the first high-level programming language.",
+    longBio: "John Warner Backus was an American computer scientist. He directed the team that invented and implemented FORTRAN, the first widely used high-level programming language, and was the inventor of the Backus-Naur form (BNF), a widely used notation to define formal language syntax. He later did research on functional programming and helped to popularize it. He received the Turing Award in 1977.",
+    contributions: [
+      "Led the team that created FORTRAN",
+      "Invented the Backus-Naur Form (BNF) notation for describing syntax",
+      "Developed the first FORTRAN compiler",
+      "Pioneered work in functional programming",
+      "Won the Turing Award in 1977"
+    ],
+    quote: "You need the willingness to fail all the time. You have to generate many ideas and then you have to work very hard only to discover that they don't work. And you keep doing that over and over until you find one that does work.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/John_Backus"
+      },
+      {
+        label: "Computer History Museum",
+        url: "https://www.computerhistory.org/fellowawards/hall/john-backus/"
+      }
+    ],
+    tags: ["FORTRAN", "Programming Languages", "Compilers", "Formal Languages", "Functional Programming"]
+  },
+  {
+    id: "leslie-lamport",
+    name: "Leslie Lamport",
+    birthYear: "1941",
+    deathYear: null,
+    shortBio: "Made fundamental contributions to distributed computing and formal verification.",
+    longBio: "Leslie B. Lamport is an American computer scientist who has made seminal contributions to the theory of distributed and concurrent systems. He is best known for his work on temporal logic and the development of LaTeX document preparation system. His concepts like the Lamport timestamp, the bakery algorithm, and Paxos algorithm are fundamental to distributed computing. He received the Turing Award in 2013 for his work in distributed computing systems.",
+    contributions: [
+      "Developed the concept of logical clocks and Lamport timestamps",
+      "Created the LaTeX document preparation system",
+      "Invented the Paxos consensus algorithm",
+      "Made fundamental contributions to fault-tolerant distributed computing",
+      "Won the Turing Award in 2013"
+    ],
+    quote: "A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/Leslie_Lamport"
+      },
+      {
+        label: "Microsoft Research",
+        url: "https://www.microsoft.com/en-us/research/people/lamport/"
+      }
+    ],
+    tags: ["Distributed Systems", "LaTeX", "Formal Verification", "Concurrent Computing", "Algorithms"]
+  },
+  {
+    id: "fernando-corbato",
+    name: "Fernando Corbató",
+    birthYear: "1926",
+    deathYear: "2019",
+    shortBio: "Developed time-sharing systems, enabling multiple users to interact with computers simultaneously.",
+    longBio: "Fernando José Corbató was an American computer scientist, notable as a pioneer in the development of time-sharing operating systems. He was the leader of the CTSS (Compatible Time-Sharing System) project at MIT's Computation Center, and is also known for Corbató's Law, which states that 'The number of lines of code a programmer can write in a fixed period of time is the same independent of the language used.'",
+    contributions: [
+      "Led the development of CTSS, one of the first time-sharing systems",
+      "Directed the Multics operating system project",
+      "Pioneered computer password security",
+      "Developed concepts that influenced modern operating systems",
+      "Won the Turing Award in 1990"
+    ],
+    quote: "The best way to solve a problem is to avoid having the problem in the first place.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/Fernando_J._Corbat%C3%B3"
+      },
+      {
+        label: "MIT Memorial",
+        url: "https://www.csail.mit.edu/news/remembering-fernando-corba-father-time-sharing"
+      }
+    ],
+    tags: ["Time-sharing", "Operating Systems", "Computer Security", "Multics", "MIT"]
+  },
+  {
+    id: "ted-nelson",
+    name: "Ted Nelson",
+    birthYear: "1937",
+    deathYear: null,
+    shortBio: "Coined the terms 'hypertext' and 'hypermedia,' influencing the development of the World Wide Web.",
+    longBio: "Theodor Holm Nelson is an American pioneer of information technology, philosopher, and sociologist. He coined the terms 'hypertext' and 'hypermedia' in 1963 and published them in 1965. He founded Project Xanadu in 1960, which was his vision of a global hypertext system that predated the World Wide Web. Nelson's ideas have influenced generations of technologists, especially in the area of human-computer interaction.",
+    contributions: [
+      "Coined the terms 'hypertext' and 'hypermedia'",
+      "Founded Project Xanadu, an early hypertext system",
+      "Advocated for a different structure of the internet with two-way links",
+      "Proposed the concept of transclusion for content reuse",
+      "Influenced the development of the World Wide Web"
+    ],
+    quote: "The good news about computers is that they do what you tell them to do. The bad news is that they do what you tell them to do.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/Ted_Nelson"
+      },
+      {
+        label: "Project Xanadu",
+        url: "https://www.xanadu.net/"
+      }
+    ],
+    tags: ["Hypertext", "Information Systems", "Project Xanadu", "Human-Computer Interaction"]
+  },
+  {
+    id: "alan-kay",
+    name: "Alan Kay",
+    birthYear: "1940",
+    deathYear: null,
+    shortBio: "Pioneered object-oriented programming and graphical user interfaces, shaping modern computing.",
+    longBio: "Alan Curtis Kay is an American computer scientist. He has been a fellow at Hewlett-Packard, Disney, and Apple, as well as at several universities. He is best known for his work on object-oriented programming and windowing graphical user interface design. Kay conceived the Dynabook concept which defined the conceptual basis for laptop, tablet, and other personal computing devices. He is the president of the Viewpoints Research Institute and an adjunct professor at UCLA.",
+    contributions: [
+      "Pioneered object-oriented programming concepts",
+      "Developed the Smalltalk programming language",
+      "Conceived the Dynabook, a precursor to modern laptops and tablets",
+      "Contributed to the development of graphical user interfaces at Xerox PARC",
+      "Won the Turing Award in 2003"
+    ],
+    quote: "The best way to predict the future is to invent it.",
+    imageUrl: "/placeholder.svg",
+    links: [
+      {
+        label: "Wikipedia",
+        url: "https://en.wikipedia.org/wiki/Alan_Kay"
+      },
+      {
+        label: "Viewpoints Research Institute",
+        url: "http://www.vpri.org/html/team_bios/alan_kay.htm"
+      }
+    ],
+    tags: ["Object-Oriented Programming", "Smalltalk", "Graphical User Interfaces", "Dynabook", "Xerox PARC"]
   }
 ];

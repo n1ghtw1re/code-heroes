@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
@@ -195,7 +194,17 @@ function getPioneerImage(pioneerId: string): string {
     'shirley-ann-jackson': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Shirley_Ann_Jackson_official_portrait.jpg/800px-Shirley_Ann_Jackson_official_portrait.jpg',
     'guido-van-rossum': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Guido-portrait-2014-drc.jpg/800px-Guido-portrait-2014-drc.jpg',
     'edsger-dijkstra': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/800px-Edsger_Wybe_Dijkstra.jpg',
-    'jean-bartik': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Jean_Bartik.jpg/800px-Jean_Bartik.jpg'
+    'jean-bartik': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Jean_Bartik.jpg/800px-Jean_Bartik.jpg',
+    'ken-thompson': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ken_Thompson_%28sitting%29_and_Dennis_Ritchie_at_PDP-11_%282876612463%29.jpg/800px-Ken_Thompson_%28sitting%29_and_Dennis_Ritchie_at_PDP-11_%282876612463%29.jpg',
+    'richard-stallman': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Richard_Stallman_-_F%C3%AAte_de_l%27Humanit%C3%A9_2014_-_010.jpg/800px-Richard_Stallman_-_F%C3%AAte_de_l%27Humanit%C3%A9_2014_-_010.jpg',
+    
+    'brian-kernighan': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg/800px-Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg',
+    'larry-wall': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Larry_Wall_YAPC_2007.jpg/800px-Larry_Wall_YAPC_2007.jpg',
+    'john-backus': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/John_Backus_2.jpg/800px-John_Backus_2.jpg',
+    'leslie-lamport': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Leslie_Lamport_%28cropped%29.jpg/800px-Leslie_Lamport_%28cropped%29.jpg',
+    'fernando-corbato': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Fernando_J_Corbato.jpg/800px-Fernando_J_Corbato.jpg',
+    'ted-nelson': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ted_Nelson_cropped.jpg/800px-Ted_Nelson_cropped.jpg',
+    'alan-kay': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Alan_Kay_%283097597186%29.jpg/800px-Alan_Kay_%283097597186%29.jpg'
   };
   
   return imageMap[pioneerId] || '/placeholder.svg';
