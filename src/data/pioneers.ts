@@ -1,3 +1,4 @@
+
 export interface Pioneer {
   id: string;
   name: string;
@@ -623,4 +624,9 @@ export const pioneers: Pioneer[] = [
       },
       {
         label: "GNU Project",
-        url: "https://www.gnu.org/gnu/rms-lisp.
+        url: "https://www.gnu.org/gnu/rms-lisp.html"
+      }
+    ],
+    tags: ["Free Software", "GNU", "GPL", "Software Freedom", "FSF"]
+  }
+];
