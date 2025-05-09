@@ -102,37 +102,41 @@ const Timeline = () => {
               </div>
               
               {/* Timeline display */}
-              <div className="border-l border-hacker-green pl-8 space-y-12">
+              <div className="timeline-container">
                 {filteredPioneers.length > 0 ? (
                   filteredPioneers.map(pioneer => (
-                    <div key={pioneer.id} className="relative timeline-item">
-                      <div className="mb-1 text-sm text-hacker-green">
-                        {pioneer.birthYear} - {pioneer.deathYear || 'Present'}
+                    <div key={pioneer.id} className="timeline-item">
+                      <div className="timeline-card">
+                        <div className="timeline-date">
+                          {pioneer.birthYear} - {pioneer.deathYear || 'Present'}
+                        </div>
+                        <div className="timeline-content">
+                          <h2 className="text-xl font-bold mb-1">{pioneer.name}</h2>
+                          <p className="mb-3 text-muted-foreground">{pioneer.shortBio}</p>
+                          
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {pioneer.tags.slice(0, 3).map(tag => (
+                              <Badge key={tag} variant="secondary" className="text-xs">
+                                {tag}
+                              </Badge>
+                            ))}
+                            {pioneer.tags.length > 3 && (
+                              <Badge variant="outline" className="text-xs">
+                                +{pioneer.tags.length - 3}
+                              </Badge>
+                            )}
+                          </div>
+                          
+                          <Link to={`/pioneer/${pioneer.id}`}>
+                            <Button 
+                              size="sm" 
+                              className="bg-hacker-green hover:bg-hacker-green/80 text-background"
+                            >
+                              Learn More
+                            </Button>
+                          </Link>
+                        </div>
                       </div>
-                      <h2 className="text-xl font-bold mb-1">{pioneer.name}</h2>
-                      <p className="mb-2 text-muted-foreground">{pioneer.shortBio}</p>
-                      
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        {pioneer.tags.slice(0, 3).map(tag => (
-                          <Badge key={tag} variant="secondary" className="text-xs">
-                            {tag}
-                          </Badge>
-                        ))}
-                        {pioneer.tags.length > 3 && (
-                          <Badge variant="outline" className="text-xs">
-                            +{pioneer.tags.length - 3}
-                          </Badge>
-                        )}
-                      </div>
-                      
-                      <Link to={`/pioneer/${pioneer.id}`}>
-                        <Button 
-                          size="sm" 
-                          className="bg-hacker-green hover:bg-hacker-green/80 text-background"
-                        >
-                          Learn More
-                        </Button>
-                      </Link>
                     </div>
                   ))
                 ) : (

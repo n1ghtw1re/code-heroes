@@ -91,9 +91,43 @@
   }
 }
 
+/* Improved Timeline styling */
+.timeline-container {
+  @apply relative border-l border-hacker-green pl-8 space-y-12 ml-4;
+}
+
+.timeline-item {
+  @apply relative pb-6;
+}
+
 .timeline-item::before {
   content: "";
-  @apply absolute left-0 top-2 w-3 h-3 rounded-full bg-hacker-green -ml-1.5 border border-background;
+  @apply absolute left-0 top-6 w-4 h-4 rounded-full bg-hacker-green -ml-[18px] border-2 border-background z-10;
+}
+
+.timeline-date {
+  @apply inline-block mb-1 text-sm text-hacker-green font-mono pl-0;
+}
+
+.timeline-content {
+  @apply pt-2 transition-all duration-300;
+}
+
+.timeline-card {
+  @apply relative overflow-hidden rounded-lg p-6 border border-border bg-card/70 hover:bg-card transition-all duration-300;
+}
+
+.timeline-card::before {
+  content: '';
+  @apply absolute -inset-1 bg-gradient-to-r from-hacker-green/20 to-hacker-cyan/20 opacity-0 blur transition duration-700 ease-in-out rounded-lg;
+}
+
+.timeline-card:hover::before {
+  @apply opacity-100;
+}
+
+.timeline-card > * {
+  @apply relative z-10;
 }
 
 .feature-card {
