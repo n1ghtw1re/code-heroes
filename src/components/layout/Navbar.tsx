@@ -54,6 +54,14 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
+                to="/open-source"
+                className="text-foreground hover:text-hacker-green transition-colors"
+              >
+                Open Source
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/resources"
                 className="text-foreground hover:text-hacker-green transition-colors"
               >
