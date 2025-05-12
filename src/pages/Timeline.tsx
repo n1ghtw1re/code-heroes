@@ -9,21 +9,24 @@ import { TypingText } from '@/components/ui/TypingText';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { Search } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp } from 'lucide-react';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { ChevronDown } from "lucide-react";
 
 const Timeline = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredPioneers, setFilteredPioneers] = useState(pioneers);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [showAllTags, setShowAllTags] = useState(false);
   
   // Get all unique tags across all pioneers
   const allTags = [...new Set(pioneers.flatMap(pioneer => pioneer.tags))].sort();
+  
+  // Display only a few tags initially
+  const visibleTags = showAllTags ? allTags : allTags.slice(0, 5);
   
   // Sort pioneers by birth year
   const sortedPioneers = [...pioneers].sort((a, b) => 
@@ -92,7 +95,9 @@ const Timeline = () => {
                   >
                     All
                   </Badge>
-                  {allTags.map(tag => (
+                  
+                  {/* First few tags always visible */}
+                  {visibleTags.map(tag => (
                     <Badge
                       key={tag}
                       variant={selectedTag === tag ? "default" : "outline"}
@@ -104,6 +109,26 @@ const Timeline = () => {
                       {tag}
                     </Badge>
                   ))}
+                  
+                  {/* Show/Hide tags toggle button */}
+                  {allTags.length > 5 && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex items-center gap-1"
+                      onClick={() => setShowAllTags(!showAllTags)}
+                    >
+                      {showAllTags ? (
+                        <>
+                          Show Less <ChevronUp className="h-4 w-4" />
+                        </>
+                      ) : (
+                        <>
+                          Show All Tags ({allTags.length - 5} more) <ChevronDown className="h-4 w-4" />
+                        </>
+                      )}
+                    </Button>
+                  )}
                 </div>
               </div>
               
