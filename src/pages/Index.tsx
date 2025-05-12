@@ -30,16 +30,17 @@ const Index = () => {
         <section className="relative h-screen flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90"></div>
-            {/* Matrix-like characters for background effect */}
-            {Array.from({ length: 50 }).map((_, i) => (
+            {/* Matrix-like characters for background effect - increased quantity and animation speed */}
+            {Array.from({ length: 120 }).map((_, i) => (
               <div
                 key={i}
                 className="matrix-character"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                  animationDuration: `${15 + Math.random() * 20}s`,
-                  animationDelay: `${Math.random() * 5}s`,
+                  animationDuration: `${5 + Math.random() * 10}s`,
+                  animationDelay: `${Math.random() * 2}s`,
+                  opacity: Math.random() * 0.4 + 0.1,
                 }}
               >
                 {String.fromCharCode(33 + Math.floor(Math.random() * 94))}
@@ -49,7 +50,7 @@ const Index = () => {
           
           <div className="container relative z-10 max-w-4xl text-center px-6">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-hacker-green">
-              <TypingText text="< Code Heroes Unite />" className="inline-block" />
+              <TypingText text="< Code Heroes Unite />" className="inline-block" speed={30} />
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-foreground/80">
               Celebrating the pioneers who made technology a force for good

@@ -10,6 +10,12 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
 
 const Timeline = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -114,18 +120,29 @@ const Timeline = () => {
                           <h2 className="text-xl font-bold mb-1">{pioneer.name}</h2>
                           <p className="mb-3 text-muted-foreground">{pioneer.shortBio}</p>
                           
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {pioneer.tags.slice(0, 3).map(tag => (
-                              <Badge key={tag} variant="secondary" className="text-xs">
-                                {tag}
+                          {/* Collapsible tags section */}
+                          <Collapsible className="mb-4">
+                            <div className="flex items-center gap-2 mb-2">
+                              <Badge variant="secondary" className="text-xs">
+                                {pioneer.tags[0] || "General"}
                               </Badge>
-                            ))}
-                            {pioneer.tags.length > 3 && (
-                              <Badge variant="outline" className="text-xs">
-                                +{pioneer.tags.length - 3}
-                              </Badge>
-                            )}
-                          </div>
+                              {pioneer.tags.length > 1 && (
+                                <CollapsibleTrigger className="flex items-center text-xs text-muted-foreground hover:text-foreground">
+                                  +{pioneer.tags.length - 1} more <ChevronDown className="h-3 w-3 ml-1" />
+                                </CollapsibleTrigger>
+                              )}
+                            </div>
+                            
+                            <CollapsibleContent>
+                              <div className="flex flex-wrap gap-2 pl-2 border-l-2 border-muted">
+                                {pioneer.tags.slice(1).map(tag => (
+                                  <Badge key={tag} variant="outline" className="text-xs">
+                                    {tag}
+                                  </Badge>
+                                ))}
+                              </div>
+                            </CollapsibleContent>
+                          </Collapsible>
                           
                           <Link to={`/pioneer/${pioneer.id}`}>
                             <Button 
