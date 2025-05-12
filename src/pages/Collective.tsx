@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { External, Network } from 'lucide-react';
+import { ExternalLink, Network } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { PageTransition } from '@/components/layout/PageTransition';
@@ -212,7 +211,7 @@ const Collective = () => {
                               onClick={(e) => e.stopPropagation()}
                               className="text-hacker-cyan hover:text-hacker-green transition-colors"
                             >
-                              <External className="h-4 w-4" />
+                              <ExternalLink className="h-4 w-4" />
                             </a>
                           </div>
                           <p className="text-sm text-muted-foreground line-clamp-3">{site.description}</p>
@@ -261,7 +260,7 @@ const Collective = () => {
                       className="inline-flex items-center gap-2 bg-hacker-green/20 hover:bg-hacker-green/30 text-hacker-green py-2 px-4 rounded-md transition-colors"
                     >
                       <span>Visit Site</span>
-                      <External className="h-4 w-4" />
+                      <ExternalLink className="h-4 w-4" />
                     </a>
                   </motion.div>
                 </motion.div>
