@@ -73,7 +73,7 @@
   }
   
   .glass-card {
-    @apply bg-opacity-20 backdrop-blur-sm border border-white/10;
+    @apply bg-card/30 backdrop-blur-sm border border-hacker-green/20 rounded-lg shadow-lg shadow-hacker-green/5;
   }
 
   .matrix-bg {
