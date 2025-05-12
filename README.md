@@ -1,73 +1,115 @@
-# Welcome to your Lovable project
 
-## Project info
+# Code Heroes Unite
 
-**URL**: https://lovable.dev/projects/7762e869-320f-49e8-bb23-00a1c0796549
+A website celebrating the pioneers who made technology a force for good.
 
-## How can I edit this code?
+![Code Heroes Unite](public/screenshot.png)
 
-There are several ways of editing your application.
+## About the Project
 
-**Use Lovable**
+Code Heroes Unite is a tribute to the innovators, programmers, and visionaries who shaped the digital world with a focus on openness, freedom, and positive impact. The site features:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7762e869-320f-49e8-bb23-00a1c0796549) and start prompting.
+- Interactive timeline of computing history
+- Detailed profiles of key technological pioneers
+- Information about open source contributions
+- Resources for learning more about tech history
+- Links to the N1ghtw1re Collective of related sites
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technologies Used
 
-**Use your preferred IDE**
+- React with TypeScript
+- Vite for fast development and building
+- Tailwind CSS for styling
+- Framer Motion for animations
+- React Router for navigation
+- Shadcn UI for component library
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js (v14 or higher)
+- npm or yarn
 
+### Installation
+
+1. Clone the repository:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/yourusername/code-heroes-unite.git
+cd code-heroes-unite
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies:
+```sh
+npm install
+# or
+yarn
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Start the development server:
+```sh
+npm run dev
+# or
+yarn dev
+```
 
-**Use GitHub Codespaces**
+4. Open your browser and navigate to `http://localhost:8080`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Building for Production
 
-## What technologies are used for this project?
+To create a production build:
 
-This project is built with:
+```sh
+npm run build
+# or
+yarn build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The built files will be in the `dist` directory.
 
-## How can I deploy this project?
+## Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/7762e869-320f-49e8-bb23-00a1c0796549) and click on Share -> Publish.
+```
+code-heroes-unite/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # Reusable UI components
+│   │   ├── layout/     # Layout components (Navbar, Footer, etc.)
+│   │   └── ui/         # UI components (buttons, cards, etc.)
+│   ├── data/           # Data files for pioneers and other content
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utility functions and helpers
+│   ├── pages/          # Page components
+│   ├── App.tsx         # Main application component
+│   └── main.tsx        # Application entry point
+├── index.html          # HTML template
+└── README.md           # Project documentation
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Features
 
-Yes, you can!
+- **Timeline View**: Explore a chronological history of computing pioneers
+- **Pioneer Profiles**: Detailed information about key figures in tech history
+- **Open Source Spotlight**: Highlighting the importance of open source contributions
+- **Responsive Design**: Optimized for all screen sizes
+- **Modern UI**: Cyberpunk-inspired design with a focus on readability and accessibility
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Contributions are welcome! If you'd like to add to the project, please fork the repository and create a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+Email: contact@codeheroes-unite.example.com
+
+Project Link: [https://github.com/yourusername/code-heroes-unite](https://github.com/yourusername/code-heroes-unite)
+
+## Acknowledgments
+
+- All the real-world tech pioneers featured in this site
+- The N1ghtw1re Collective for inspiration
+- All open source contributors who make the digital world better

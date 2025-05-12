@@ -13,6 +13,8 @@ import NotFound from "./pages/NotFound";
 import Resources from "./pages/Resources";
 import SpotlightOnOpenSource from "./pages/SpotlightOnOpenSource";
 import Collective from "./pages/Collective";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const AnimatedRoutes = () => {
         <Route path="/resources" element={<Resources />} />
         <Route path="/open-source" element={<SpotlightOnOpenSource />} />
         <Route path="/collective" element={<Collective />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>

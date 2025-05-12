@@ -16,7 +16,11 @@ import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-  DrawerClose
+  DrawerClose,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerFooter
 } from '@/components/ui/drawer';
 
 export const Navbar = () => {
@@ -85,7 +89,11 @@ export const Navbar = () => {
             </button>
           </DrawerTrigger>
           <DrawerContent className="bg-background/95 backdrop-blur-lg">
-            <div className="py-6">
+            <DrawerHeader>
+              <DrawerTitle>Navigation</DrawerTitle>
+              <DrawerDescription>Access all pages of the site</DrawerDescription>
+            </DrawerHeader>
+            <div className="py-2">
               <nav className="px-6">
                 <ul className="flex flex-col gap-4 font-mono">
                   {navItems.map((item) => (
@@ -102,6 +110,13 @@ export const Navbar = () => {
                 </ul>
               </nav>
             </div>
+            <DrawerFooter>
+              <DrawerClose asChild>
+                <button className="w-full text-center text-muted-foreground hover:text-foreground">
+                  Close Menu
+                </button>
+              </DrawerClose>
+            </DrawerFooter>
           </DrawerContent>
         </Drawer>
       </div>
