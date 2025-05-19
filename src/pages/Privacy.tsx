@@ -104,7 +104,7 @@ const Privacy = () => {
                   If you have any questions about this Privacy Policy, You can contact us at:
                 </p>
                 <p className="text-hacker-green mt-2">
-                  contact@codeheroes-unite.example.com
+                  n1ghtw1re@proton.me
                 </p>
               </div>
             </div>

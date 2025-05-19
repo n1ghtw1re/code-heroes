@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import { Mail } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,6 +16,13 @@ export const Footer = () => {
             <p className="text-sm text-muted-foreground mt-2">
               Celebrating pioneers who changed technology for good
             </p>
+            <a 
+              href="mailto:n1ghtw1re@proton.me" 
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-hacker-green transition-colors mt-2"
+            >
+              <Mail size={16} />
+              n1ghtw1re@proton.me
+            </a>
           </div>
           
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
@@ -40,6 +48,17 @@ export const Footer = () => {
         
         <div className="mt-8 pt-4 border-t border-border text-center text-xs text-muted-foreground">
           <p>&copy; {currentYear} Code Heroes Unite. All rights reserved.</p>
+          <p className="mt-2">
+            Designed by{' '}
+            <a 
+              href="https://n1ghtw1re-studios.lovable.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-hacker-green hover:underline"
+            >
+              N1ghtw1re Studios
+            </a>
+          </p>
         </div>
       </div>
     </footer>
